@@ -1,0 +1,25 @@
+# ninja log v5
+1	147	1676680993006242686	/local-scratch/nishant/simul/speech_simul/itst/build/temp.linux-x86_64-cpython-38/fairseq/clib/libbleu/module.o	d2a6e936205ea9aa
+0	376	1676680993238241274	/local-scratch/nishant/simul/speech_simul/itst/build/temp.linux-x86_64-cpython-38/fairseq/clib/libbleu/libbleu.o	fe0fd3ba509447cd
+0	5869	1676680999218204876	/local-scratch/nishant/simul/speech_simul/itst/build/temp.linux-x86_64-cpython-38/fairseq/data/data_utils_fast.o	132db6ba2e2df1d
+0	5309	1676681004634171910	/local-scratch/nishant/simul/speech_simul/itst/build/temp.linux-x86_64-cpython-38/fairseq/data/token_block_utils_fast.o	c39de1265c643d0b
+0	24735	1676681029478020691	/local-scratch/nishant/simul/speech_simul/itst/build/temp.linux-x86_64-cpython-38/fairseq/clib/libbase/balanced_assignment.o	47eaf1aec4f9aa59
+0	16093	1676681045913920649	/local-scratch/nishant/simul/speech_simul/itst/build/temp.linux-x86_64-cpython-38/fairseq/clib/libnat/edit_dist.o	6dcf92efae6229c6
+1	148	1676681047041913783	/local-scratch/nishant/simul/speech_simul/itst/build/temp.linux-x86_64-cpython-38/fairseq/clib/libbleu/module.o	fbbd26ed59bb5f18
+0	395	1676681047289912274	/local-scratch/nishant/simul/speech_simul/itst/build/temp.linux-x86_64-cpython-38/fairseq/clib/libbleu/libbleu.o	61665a98107a2e79
+1	5102	1676681052489880623	/local-scratch/nishant/simul/speech_simul/itst/build/temp.linux-x86_64-cpython-38/fairseq/data/data_utils_fast.o	b5f0d5ea828ab9a7
+1	5351	1676681057941847437	/local-scratch/nishant/simul/speech_simul/itst/build/temp.linux-x86_64-cpython-38/fairseq/data/token_block_utils_fast.o	7854fb405ce837e2
+6	18448	1676681076501734468	/local-scratch/nishant/simul/speech_simul/itst/build/temp.linux-x86_64-cpython-38/fairseq/clib/libbase/balanced_assignment.o	1d769003535a08af
+41	14090	1676681090885646916	/local-scratch/nishant/simul/speech_simul/itst/build/temp.linux-x86_64-cpython-38/fairseq/clib/libnat/edit_dist.o	65dcba084f0a8860
+0	132	1676681153033268637	/local-scratch/nishant/simul/speech_simul/itst/build/temp.linux-x86_64-cpython-38/fairseq/clib/libbleu/module.o	d2a6e936205ea9aa
+0	372	1676681153273267176	/local-scratch/nishant/simul/speech_simul/itst/build/temp.linux-x86_64-cpython-38/fairseq/clib/libbleu/libbleu.o	fe0fd3ba509447cd
+19	5174	1676681158537235135	/local-scratch/nishant/simul/speech_simul/itst/build/temp.linux-x86_64-cpython-38/fairseq/data/data_utils_fast.o	132db6ba2e2df1d
+0	5392	1676681164029201707	/local-scratch/nishant/simul/speech_simul/itst/build/temp.linux-x86_64-cpython-38/fairseq/data/token_block_utils_fast.o	c39de1265c643d0b
+3	18136	1676681182261090734	/local-scratch/nishant/simul/speech_simul/itst/build/temp.linux-x86_64-cpython-38/fairseq/clib/libbase/balanced_assignment.o	47eaf1aec4f9aa59
+5	14025	1676681196593003499	/local-scratch/nishant/simul/speech_simul/itst/build/temp.linux-x86_64-cpython-38/fairseq/clib/libnat/edit_dist.o	6dcf92efae6229c6
+1	131	1676681197688996827	/local-scratch/nishant/simul/speech_simul/itst/build/temp.linux-x86_64-cpython-38/fairseq/clib/libbleu/module.o	fbbd26ed59bb5f18
+0	391	1676681197948995245	/local-scratch/nishant/simul/speech_simul/itst/build/temp.linux-x86_64-cpython-38/fairseq/clib/libbleu/libbleu.o	61665a98107a2e79
+2	5047	1676681203080964008	/local-scratch/nishant/simul/speech_simul/itst/build/temp.linux-x86_64-cpython-38/fairseq/data/data_utils_fast.o	b5f0d5ea828ab9a7
+0	5302	1676681208492931066	/local-scratch/nishant/simul/speech_simul/itst/build/temp.linux-x86_64-cpython-38/fairseq/data/token_block_utils_fast.o	7854fb405ce837e2
+36	18294	1676681226888819095	/local-scratch/nishant/simul/speech_simul/itst/build/temp.linux-x86_64-cpython-38/fairseq/clib/libbase/balanced_assignment.o	1d769003535a08af
+2	14067	1676681241244731713	/local-scratch/nishant/simul/speech_simul/itst/build/temp.linux-x86_64-cpython-38/fairseq/clib/libnat/edit_dist.o	65dcba084f0a8860
