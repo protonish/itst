@@ -17,7 +17,6 @@ decorator==5.1.1
 docker-pycreds==0.4.0
 editdistance==0.6.0
 executing==1.2.0
--e git+https://github.com/ictnlp/ITST.git@b6b0d9c591f5f05f6925c13f305291d52d38d1be#egg=fairseq
 filelock==3.8.0
 flake8==4.0.1
 gdown==4.6.3
