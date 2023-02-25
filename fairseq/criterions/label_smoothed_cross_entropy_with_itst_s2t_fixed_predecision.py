@@ -32,8 +32,10 @@ class LabelSmoothedCrossEntropyCriterionWithITSTS2TFixedPredecision(LabelSmoothe
         latency_weight_var_type,
         mass_preservation,
         average_method,
+        threshold_denom=1000,
+        threshold_delta=0.5,
     ):
-        super().__init__(task, sentence_avg, label_smoothing, ignore_prefix_size, report_accuracy)
+        super().__init__(task, sentence_avg, label_smoothing, ignore_prefix_size, report_accuracy, threshold_denom, threshold_delta)
         from examples.simultaneous_translation.utils.latency import LatencyTraining
 
         self.eps = label_smoothing
@@ -94,6 +96,11 @@ class LabelSmoothedCrossEntropyCriterionWithITSTS2TFixedPredecision(LabelSmoothe
                             help="Statistics for variance loss type")
         parser.add_argument("--average-method", default="weighted_average",
                             help="Average loss type")
+        # train threshold
+        parser.add_argument("--threshold-delta", default=0.5, type=float, metavar='D',
+                            help="train threshold delta")
+        parser.add_argument("--threshold-denom", default=60000, type=int, metavar='D',
+                            help="denominator for setting train threshold")
         # fmt: on
 
     def compute_loss(self, model, net_output, sample, reduce=True):
