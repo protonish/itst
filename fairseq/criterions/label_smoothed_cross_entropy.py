@@ -33,6 +33,14 @@ class LabelSmoothedCrossEntropyCriterionConfig(FairseqDataclass):
         metadata={"help": "Ignore first N tokens"},
     )
     sentence_avg: bool = II("optimization.sentence_avg")
+    threshold_denom: int = field(
+        default=10000,
+        metadata={"help": "denominator for setting train threshold"},
+    )
+    threshold_delta: float = field(
+        default=0.5,
+        metadata={"help": "train threshold delta"},
+    )
 
 
 def label_smoothed_nll_loss(lprobs, target, epsilon, ignore_index=None, reduce=True):
@@ -64,6 +72,8 @@ class LabelSmoothedCrossEntropyCriterion(FairseqCriterion):
         label_smoothing,
         ignore_prefix_size=0,
         report_accuracy=False,
+        threshold_denom=1000,
+        threshold_delta=0.5,
     ):
         super().__init__(task)
         self.sentence_avg = sentence_avg
@@ -71,6 +81,11 @@ class LabelSmoothedCrossEntropyCriterion(FairseqCriterion):
         self.ignore_prefix_size = ignore_prefix_size
         self.report_accuracy = report_accuracy
         self.extra_log = None
+        # train threshold itst
+        self.threshold_denom = threshold_denom
+        self.threshold_delta = threshold_delta
+        assert self.threshold_delta <1, "threshold_delta must be smaller : {}".format(self.threshold_delta)
+        logger.info("Train threshold [delta = {}] and [denom = {}]".format()threshold_denom, threshold_delta)
 
     def forward(self, model, sample, update_num=None, reduce=True):
         """Compute the loss for the given sample.
@@ -85,10 +100,10 @@ class LabelSmoothedCrossEntropyCriterion(FairseqCriterion):
         train_threshold = None
         # TypeError: bad operand type for unary -: 'NoneType'
         if update_num is not None:
-            train_threshold = 0.5 + 0.5 * math.exp(-update_num / 20000)
-            if update_num < 3000:
+            train_threshold = self.threshold_delta + (1 - self.threshold_delta) * math.exp(-update_num / self.threshold_denom)
+            if update_num < 4000:
                 train_threshold = None
-            if update_num == 3000:
+            if update_num == 4000:
                 logger.info("Anealed train_threshold in effect starting at {}".format(train_threshold))
 
         net_output = model(**sample["net_input"], train_threshold=train_threshold)
