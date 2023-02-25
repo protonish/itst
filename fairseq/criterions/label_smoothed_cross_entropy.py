@@ -85,7 +85,7 @@ class LabelSmoothedCrossEntropyCriterion(FairseqCriterion):
         self.threshold_denom = threshold_denom
         self.threshold_delta = threshold_delta
         assert self.threshold_delta <1, "threshold_delta must be smaller : {}".format(self.threshold_delta)
-        logger.info("Train threshold [delta = {}] and [denom = {}]".format()threshold_denom, threshold_delta)
+        logger.info("Train threshold [delta = {}] and [denom = {}]".format(threshold_denom, threshold_delta))
 
     def forward(self, model, sample, update_num=None, reduce=True):
         """Compute the loss for the given sample.
